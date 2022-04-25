@@ -1,0 +1,347 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <div class="main-cont">
+        <!-- Header -->
+        <header>
+            <!-- Desktop Header Content -->
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="{{ url_for('index') }}">
+                        <img class="logo-img"
+                            src="https://res.cloudinary.com/dxcrd5sos/image/upload/v1641791579/coepmobiles-logo-1_xyywtv.png"
+                            alt="">
+                    </a>
+                </div>
+                <!-- Navigation -->
+                <nav>
+                    <ul class="navs">
+                        <li class="nr"><a href="tel:+49302787910"><i class="fas fa-phone-alt"></i> 030-278791-0</a></li>
+                        <li><a href="#top-space">Home</a></li>
+                        <li><a href="#about-us-cont">Über Uns</a></li>
+                        <li><a href="#produkte-headl">Produkte</a></li>
+                        <li><a href="#footer">Kontakt / Info</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- Tablet/Mobile Header Content -->
+            <div class="collapsed-header-content">
+                <div class="logo collapsed-header">
+                    <a href="#">
+                        <img class="logo-img"
+                            src="https://res.cloudinary.com/dxcrd5sos/image/upload/v1641791579/coepmobiles-logo-1_xyywtv.png"
+                            alt="logo">
+                    </a>
+                </div>
+                <div class="collapsed-header-icons flex-center">
+                    <div class="header-icons-box">
+                        <a href="tel:+49302787910"><i class="fas fa-phone-alt"></i></a>
+                        <a href="#footer"><i class="fas fa-map-marker-alt"></i></a>
+                    </div>
+                    <div onclick="toggleSlideInMenu()" class="menu-btn">
+                        <div class="line f"></div>
+                        <div class="line s"></div>
+                        <div class="line l"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Tablet/Mobile Slide In Menu -->
+        <div onclick="toggleSlideInMenu()" class="slide-in-bg d-none"></div>
+        <div class="slide-in-navs">
+            <nav>
+                <ul>
+                    <li onclick="toggleSlideInMenu()">
+                        <a href="#top-space">
+                            <div class="menu-icon">
+                                <img src="https://res.cloudinary.com/dxcrd5sos/image/upload/v1648836497/thumbnail_18_h8jsux.png" alt="">
+                            </div>
+                            <span>HOME</span>
+                        </a>
+                    </li>
+                    <li onclick="toggleSlideInMenu()">
+                        <a href="#about-us-cont">
+                            <div class="menu-icon">
+                                <img src="https://res.cloudinary.com/dxcrd5sos/image/upload/v1648836492/thumbnail_20_b7ae58.png" alt="">
+                            </div>
+                            <span>Über Uns</span>
+                        </a>
+                    </li>
+                    <li onclick="toggleSlideInMenu()">
+                        <a href="#produkte-headl">
+                            <div class="menu-icon">
+                                <img src="https://res.cloudinary.com/dxcrd5sos/image/upload/v1648836494/thumbnail_19_lo280k.png" alt="">
+                            </div>
+                            <span>Produkte</span>
+                        </a>
+                    </li>
+                    <li onclick="toggleSlideInMenu()">
+                        <a href="#footer">
+                            <div class="menu-icon">
+                                <img src="https://res.cloudinary.com/dxcrd5sos/image/upload/v1648836522/thumbnail_15_fl7pa4.png" alt="">
+                            </div>
+                            <span>Kontakt / Info</span>
+                        </a>
+                    </li>
+                    <li onclick="toggleSlideInMenu()">
+                        <a href="tel:+49302787910">
+                            <div class="menu-icon">
+                                <img src="https://res.cloudinary.com/dxcrd5sos/image/upload/v1648836515/thumbnail_16_zwq2up.png" alt="">
+                            </div>
+                            <span>Telefon</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!-- Home Screen Container -->
+        <div class="top-space"></div>
+        <div class="home-cont flex-center">
+            <div id="home-bg"></div>
+            <div class="container">
+                <div class="home-content">
+                    <h1 class="sale-headl">FOR SALE</h1>
+                    <h5 class="sub-headl">UNSERE <span class="not-v">ALTERNATIVEN</span> CHINESISCHEN AUTOMOBILE </h5>
+                    <button class="bttn home-screen-bttn flex-center"><a id="zu-produkte" href="#uber"></a>ZU DEN
+                        ANGEBOTEN</button>
+                </div>
+            </div>
+        </div>
+        <!-- About Us Container -->
+        <div id="products-cont">
+            <div class="container">
+                <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="500">
+                    <div id="about-us-cont">
+                        <!-- Box Shadow - About Us Cont -->
+                        <div class="about-shadow"></div>
+                        <div class="about-shadow2"></div>
+                        <div class="about-us-box closed">
+                            <h4 class="uppercase">Über Uns</h4>
+                            <div class="member-underline uber-uns"></div>
+                            <p>
+                                Wir, New-Cöp und Copmobiles stehen für Zukunft und Tradition. Unsere Jahrzehnte lange
+                                Erfahrung im Neuwagengeschäft kombinieren wir mit Technologieoffenheit,
+                                Innovationsbereitschaft und Kundenorientierung. <br>
+
+                                Durch die Kooperation mit DFSK bieten wir Ihnen ein Portfolio an Fahrzeugen zu attraktiven
+                                Preisen das allen Ansprüchen an Ihre zukunftsfähige Mobilität gerecht wird.
+                            </p>
+                        </div>
+                        <!-- Opened About Us - Member Section -->
+                        <div class="about-us-box opened d-none">
+                            <h2 class="member-headline">TEAM</h2>
+                            <div class="member-underline"></div>
+                            <div class="">
+                                <div>
+                                    <p style="text-align: center; font-size: 16px;
+        line-height: 28px;">Wir sind Cöpmobiles!</p>
+                                </div>
+                            </div>
+                            <!-- Members Container -->
+                            <div class="members-cont">
+                                <div class="member-card">
+                                    <div class="img-cont">
+                                        <a href="#">
+                                            <img title="Thorsten Schulz"
+                                                src="https://www.coepmobiles.de/wp-content/uploads/2017/05/thorsten.jpg"
+                                                alt="bild von thorsten schulz">
+                                        </a>
+                                        <div class="member-desc">
+                                            Autos im Kopf und Benzin im Blut - der Auskenner in Sachen Lancia &amp; Fiat.
+                                            Thorsten ist bereits seit über 40 Jahren bei AH Heuer, welches seit 1967 auf
+                                            Fiat spezialisiert ist und hat ein Herz für klassische Fahrzeuge, jeglicher
+                                            Couleur. Er hält die Fäden zusammen, behält immer den überblick und verliert
+                                            niemals die Geduld.
+                                        </div>
+                                    </div>
+                                    <div class="member-content">
+                                        <div class="member-name">
+                                            <a>Thorsten Schulz</a>
+                                        </div>
+                                        <div class="member-job">
+                                            Chef und Gründer
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="member-card">
+                                    <div class="img-cont">
+                                        <a href="#">
+                                            <img title="Thorsten Schulz"
+                                                src="https://www.coepmobiles.de/wp-content/uploads/2017/05/manuela.jpg"
+                                                alt="bild von thorsten schulz">
+                                        </a>
+                                        <div class="member-desc">
+                                            Stets gut aufgelegt, lässt sich durch nichts aus der Ruhe bringen. Manuela,
+                                            unsere gute Seele, kümmert sich um das Wohl unserer Kundschaft und behält dabei
+                                            noch die Zahlen im Auge.
+                                        </div>
+                                    </div>
+                                    <div class="member-content">
+                                        <div class="member-name">
+                                            <a>Manuela Kroek</a>
+                                        </div>
+                                        <div class="member-job">
+                                            Kundenempfang
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="member-card">
+                                    <div class="img-cont">
+                                        <a href="#">
+                                            <img title="Thorsten Schulz"
+                                                src="https://www.coepmobiles.de/wp-content/uploads/2020/06/Reimund.png"
+                                                alt="bild von thorsten schulz">
+                                        </a>
+                                        <div class="member-desc">
+                                            Verkauf und Beratung von Fahrzeugen oder besser Liebhaberberater
+                                        </div>
+                                    </div>
+                                    <div class="member-content">
+                                        <div class="member-name">
+                                            <a>Reimund Loschen</a>
+                                        </div>
+                                        <div class="member-job">
+                                            Liebhaberberarer
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Link to Projects from Coep BUTTON -->
+                            <a class="projekte-btn" href="https://www.coepmobiles.de/projekte/" title="UNSERE PROJEKTE">
+                                <span>UNSERE PROJEKTE</span>
+                            </a>
+                        </div>
+                        <!-- Toggle About Container BUTTON -->
+                        <div onclick="toggleAboutCont()" class="show-more-bttn redish-color flex-center">
+                            <i class="about fas redish-color fa-chevron-right"></i>
+                        </div>
+                    </div>
+                </div>
+                <h2 id="uber" id="produkte-headl" class="produkte-headl redish-color">PRODUKTÜBERSICHT</h2>
+                <!-- Produkt Filter Container -->
+                <div class="product-filter-cont">
+                    <div class="filtern-nach">Filtern nach: </div>
+                    <div class="product-filters">
+
+                        <div class="p-filter suv">
+                            <img onclick="filterProdukte(event, 'suv')"
+                                src="https://res.cloudinary.com/dxcrd5sos/image/upload/v1646701236/thumbnail_9_wypaov.png"
+                                alt="suv filter icon">
+                            <img onclick="filterProdukte(event, 'suv') "
+                                src="https://res.cloudinary.com/dxcrd5sos/image/upload/v1646701239/thumbnail_8_xfq1hf.png"
+                                alt="activated suv filter icon" class="d-none red">
+                        </div>
+                        <div class="p-filter lkw">
+                            <img onclick="filterProdukte(event, 'lkw')"
+                                src="https://res.cloudinary.com/dxcrd5sos/image/upload/v1646701227/thumbnail_13_mnvz6z.png"
+                                alt="lkw filter icon">
+                            <img onclick="filterProdukte(event, 'lkw')"
+                                src="https://res.cloudinary.com/dxcrd5sos/image/upload/v1646701229/thumbnail_12_bjgnns.png"
+                                alt="activated lkw filter icon" class="d-none red">
+                        </div>
+                        <div class="p-filter elektro">
+                            <img onclick="filterProdukte(event, 'elektro')"
+                                src="https://res.cloudinary.com/dxcrd5sos/image/upload/v1646701231/thumbnail_11_frvxto.png"
+                                alt="elektro filter icon">
+                            <img onclick="filterProdukte(event, 'elektro')"
+                                src="https://res.cloudinary.com/dxcrd5sos/image/upload/v1646701234/thumbnail_10_xrya8o.png"
+                                alt="activated elektro filter icon" class="d-none red">
+                        </div>
+                    </div>
+                </div>
+                <!-- Produkte -->
+                <div id="produkte">
+                    <!-- Car/Produkt Card -->
+
+
+
+                    {% for produkt in produkte %}
+
+                        <div data-category="{{ produkt['kategorie'] }}" class="card-wrapper">
+                            <div class="card">
+                                <div class="card-img-top">
+                                    <a href="{{ url_for('produkt', produkt_id=produkt._id) }}" class="produkt-img-link"></a>
+                                    <img src="{{ produkt['bilder'][0] }}"
+                                        alt="Card image cap">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">DFSK - {{ produkt['modell'] }}</h5>
+                                    <p class="card-text">
+                                        {{ produkt['technische_daten']['leistung'] }} | {{ produkt['technische_daten']['kraftstoffart'] }} | {{ produkt['technische_daten']['verbrauch'] }} <br>
+                                        {{ produkt['technische_daten']['co2_emission'] }} | {{ produkt['technische_daten']['leergewicht'] }} | {{ produkt['technische_daten']['höchstgeschwindigkeit'] }}
+                                    </p>
+
+                                    <p>Lieferzeit ca. 4 Monate</p>
+
+                                    <h4 class="price redish-color">ab {{ produkt['price'] }} <span class="eur">EUR</span></h4>
+                                    <p class="redish-color">zzgl. 19% MwSt. und Fracht *</p>
+
+
+                                    <a href="{{ url_for('produkt', produkt_id=produkt._id) }}" class="btn produkt-bttn">Zum Produkt</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer id="footer">
+            <!-- Scroll To Top BUTTON -->
+            <div onclick="scrollToTop()" class="to-top-btn flex-center">
+                <i class="fas fa-angle-up"></i>
+            </div>
+            <!-- Footer Line (Animated) -->
+            <div data-aos="fade-up" data-aos-delay="0" data-aos-duration="500" class="footer-line"></div>
+            <div class="container">
+                <!-- Footer Content (Animated) -->
+                <div class="footer-content">
+                    <div class="kontakt">
+
+                        <div class="f-line"></div>
+                        <div class="kontakt-box">
+                            <div>
+                                <h6 data-aos="fade-up" data-aos-delay="300" data-aos-duration="500" class="footer-headl">
+                                    Kontakt</h6>
+                                <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="300"
+                                    class="footer-headl-line"></div>
+                                <ul data-aos="fade-up" data-aos-delay="600" data-aos-duration="500" class="footer-ul first">
+                                    <li>Cöpmobiles Berlin</li>
+                                    <li>Adlergestell 350-351</li>
+                                    <li>12489 Berlin</li>
+                                    <li><span>Zentrale:</span><a href="tel:+49302787910">030-278791-0</a></li>
+                                    <li><span>Ersatzteile:</span><a href="tel:+493027879121">030-278791-21</a></li>
+                                    <li><span>Werkst.meister:</span><a href="tel:+493027879113">030-278791-13</a></li>
+                                    <li><span>E-mai:</span><a href="mailto:info@coepmobiles.de">info@coepmobiles.de</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="information">
+                        <h6 data-aos="fade-up" data-aos-delay="300" data-aos-duration="500" class="footer-headl">Information
+                        </h6>
+                        <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="300" class="footer-headl-line">
+                        </div>
+                        <ul data-aos="fade-up" data-aos-delay="600" data-aos-duration="500" class="footer-ul">
+                            <li><a href="https://www.coepmobiles.de/impressum/">Impressum</a></li>
+                            <li><a href="https://www.coepmobiles.de/datenschutz/">Datenschutz</a></li>
+                            <li><a href="https://www.coepmobiles.de/agb/">AGB</a></li>
+                            <li><a href="https://www.coepmobiles.de/kontakt/">Kontakt</a></li>
+                            <li><span>Mo-Fr:</span>7:30 - 16:30 Uhr</li>
+                            <li><span>Samstag:</span>nach Vereinbarung</li>
+                            <li><span>Sonntag:</span>Geschlossen</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+{% endblock %}

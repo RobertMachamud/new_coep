@@ -1,0 +1,573 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <div class="main-cont">
+        <!-- Popup Window -->
+        <div class="popup-window">
+            <div class="container main">
+                <div class="img-popup-window flex-center  d-none">
+                    <div class="img-popup-bg"></div>
+                    <div class="container">
+                        <!-- Image Container -->
+                        <div class="img-popup-cont flex-center">
+                            <div onclick="toggleImgPopupWindow()" class="close-img-popup-btn">
+                                <i class="fas fa-times redish-color"></i>
+                            </div>
+                            <!-- Image Swiper -->
+                            <div class="container swipe">
+                                <div class="swiper">
+                                    <div class="swiper-wrapper">
+                            
+                                        {% set images = produkt['bilder'] %}
+                                        {% for image in images %}
+                            
+                                        <div class="swiper-slide">
+                                            <div onclick="toggleImgPopupWindow()" class="image__wrapper">
+                                                <img src="{{ image }}" alt="Product Image" />
+                                            </div>
+                                        </div>
+                            
+                                        {% endfor %}
+                            
+                                    </div>
+                                    <!-- Pagination Dots -->
+                                    <div class="swiper-pagination"></div>
+                                    <!-- Prev/Next Buttons -->
+                                    <div class="swiper-button-prev">
+                                        <i class="fa fa-angle-left redish-color"></i>
+                                    </div>
+                                    <div class="swiper-button-next">
+                                        <i class="fa fa-angle-right redish-color"></i>
+                                    </div>
+                                </div>                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Car Name -->
+                <h2 class="popup-name redish-color">
+                    <span class="uppercase">DFSK -</span> {{ produkt['modell'] }}
+                </h2>
+                <!-- Full Image Container -->
+                <div class="popup-image-cont">
+                        <!-- Image -->
+                        <div class="img-arrow-slider-cont">
+                            <!-- Image Slider (Touch) - Swiper JS -->
+                            <div class="container swipe">
+                                <div class="swiper popup">
+                                <div class="swiper-wrapper">
+
+                                    {% set images = produkt['bilder'] %}
+                                        {% for image in images %}
+
+                                        <div class="swiper-slide">
+                                            <div onclick="toggleImgPopupWindow()" class="image__wrapper">
+                                                <img src="{{ image }}" alt="Product Image" />
+                                            </div>
+                                        </div>
+
+                                    {% endfor %}
+
+                                </div>
+                                <!-- Pagination Dots -->
+                                <div class="swiper-pagination"></div>
+                                <!-- Prev/Next Buttons -->
+                                <div class="swiper-button-prev">
+                                    <i class="fa fa-angle-left redish-color"></i>
+                                </div>
+                                <div class="swiper-button-next">
+                                    <i class="fa fa-angle-right redish-color"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Icon Data Container -->
+                    <div class="popup-icon-data-cont">
+                        <div class="popup-icon-data">
+                            <!-- Data With Icons -->
+                            <div class="icon-data-cont flex-center">
+                                <div class="icon">
+                                    <img src="https://res.cloudinary.com/dxcrd5sos/image/upload/v1646699615/thumbnail_4_u7ao5b.png"
+                                        alt="leistung icon">
+                                </div>
+                                <div class="descr-box">
+                                    <p class="descr">Leistung</p>
+                                    <p class="data">{{ produkt['technische_daten']['leistung'] }}</p>
+                                </div>
+                            </div>
+                            <div class="icon-data-cont flex-center">
+                                <div class="icon">
+                                    <img src="https://res.cloudinary.com/dxcrd5sos/image/upload/v1646699616/thumbnail_3_qzexqh.png"
+                                        alt="kraftstoffart icon">
+                                </div>
+                                <div class="descr-box">
+                                    <p class="descr">Kraftstoffart</p>
+                                    <p class="data">{{ produkt['technische_daten']['kraftstoffart'] }}</p>
+                                </div>
+                            </div>
+                            <div class="icon-data-cont flex-center">
+                                <div class="icon">
+                                    <img src="https://res.cloudinary.com/dxcrd5sos/image/upload/v1646699614/thumbnail_5_hr2bra.png"
+                                        alt="vmax icon">
+                                </div>
+                                <div class="descr-box">
+                                    <p class="descr">Hochstgeschw.</p>
+                                    <p class="data">{{ produkt['technische_daten']['höchstgeschwindigkeit'] }}</p>
+                                </div>
+                            </div>
+                            <div class="icon-data-cont flex-center">
+                                <div class="icon">
+                                    <img src="https://res.cloudinary.com/dxcrd5sos/image/upload/v1646699613/thumbnail_6_ar3cqf.png"
+                                        alt="verbrauch icon">
+                                </div>
+                                <div class="descr-box">
+                                    <p class="descr">Verbrauch</p>
+                                    <p class="data">{{ produkt['technische_daten']['verbrauch'] }}</p>
+                                </div>
+                            </div>
+                            <div class="icon-data-cont flex-center">
+                                <div class="icon">
+                                    <img src="https://res.cloudinary.com/dxcrd5sos/image/upload/v1646699612/thumbnail_7_iuaepx.png"
+                                        alt="co2 austoss icon">
+                                </div>
+                                <div class="descr-box">
+                                    <p class="descr">CO2 Ausstos</p>
+                                    <p class="data">{{ produkt['technische_daten']['co2_emission'] }}</p>
+                                </div>
+                            </div>
+                            <div class="icon-data-cont flex-center">
+                                <div class="icon">
+                                    <img src="https://res.cloudinary.com/dxcrd5sos/image/upload/v1646699645/thumbnail_2_gk5dhv.png"
+                                        alt="leergewicht icon">
+                                </div>
+                                <div class="descr-box">
+                                    <p class="descr">Leergewicht</p>
+                                    <p class="data">{{ produkt['technische_daten']['leergewicht'] }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Price -->
+                <div class="popup-price-cont">
+                    <div></div>
+                    <div class="popup-price">
+                        <span class="ab">ab</span> <span>{{ produkt['price'] }} </span> <span class="eur">EUR</span>
+                        <p>zzgl. 19% MwSt. und Versand *</p>
+                    </div>
+                </div>
+                <!-- Beschreibung Data Boxes -->
+                <div class="popup-main-data-cont beschr">
+                    <!-- Car Data -->
+                    <div class="popup-beschr-data data-box">
+                        <div onclick="toggleBeschrDatenCont()" class="data-headl-cont beschr">
+                            <h5 class="redish-color">BESCHR<span class="not- v2">EIBUNG</span></h5>
+                            <!-- Extend Car Data Box Button -->
+                            <div class="open-t-daten-btn flex-center">
+                                <i class="icon-box-arrow fas fa-chevron-right beschr"></i>
+                                <i class="icon-box-cross fas fa-times beschr invisible"></i>
+                            </div>
+                        </div>
+                        <div class="daten-icon beschr">
+                            <img src="https://res.cloudinary.com/dxcrd5sos/image/upload/v1646776905/thumbnail_14_nufqdb.png"
+                                alt="car icon">
+                        </div>
+                        <div class="technische-daten beschr collapsed">
+                            <img class="hidden beschr"
+                                src="https://res.cloudinary.com/dxcrd5sos/image/upload/v1642452500/thumbnail_dfhs8a.png"
+                                alt="car icon">
+                            <div class="slide-in-data beschr">
+                                <p> <span class="model-name">Der DFSK - {{ produkt['modell'] }}</span>
+                                    {{ produkt['beschreibung'] }}
+                                </p>
+                                <h5>Austattung</h5>
+                                <hr>
+
+                                {% set ausstattungen = produkt['serienausstattung'] %}
+                                {% for ausstattung in ausstattungen %}
+
+                                    {% if loop.index == loop.length %}
+                                        <span> {{ ausstattung }}</span>
+                                    {% else %}
+                                        <span>{{ ausstattung }}</span>,
+                                    {% endif %}
+
+                                {% endfor %}
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Empty Div -->
+                    <div></div>
+                </div>
+                <!-- Technische Data Boxes  -->
+                <div class="popup-main-data-cont tech">
+                    <!-- Car Data -->
+                    <div class="popup-car-data data-box">
+                        <div onclick="toggleTechnischeDatenCont()" class="data-headl-cont">
+                            <h5 class="redish-color">TECHN<span class="not- v2">ISCHE</span> DATEN</h5>
+                            <!-- Extend Car Data Box Button -->
+                            <div class="open-t-daten-btn flex-center">
+                                <i class="icon-box-arrow tech fas fa-chevron-right"></i>
+                                <i class="icon-box-cross tech fas fa-times invisible"></i>
+                            </div>
+                        </div>
+                        <!-- Tech Icon -->
+                        <div class="daten-icon tech">
+                            <img src="https://res.cloudinary.com/dxcrd5sos/image/upload/v1642452500/thumbnail_dfhs8a.png"
+                                alt="tech icon">
+                        </div>
+                        <div class="technische-daten daten collapsed">
+                            <img class="hidden tech"
+                                src="https://res.cloudinary.com/dxcrd5sos/image/upload/v1642452500/thumbnail_dfhs8a.png"
+                                alt="car icon">
+                            <div class="slide-in-data tech">
+
+                                {% if produkt['technische_daten']['motor'] %}
+                                    <div class="data">
+                                        <div class="data-l">Motor</div>
+                                        <div class="data-rtechnische">{{ produkt['technische_daten']['motor'] }}</div>
+                                    </div>
+                                {% endif %}
+
+                                {% if produkt['technische_daten']['motor2'] %}
+                                    <div class="data">
+                                        <div class="data-l">Motor 2</div>
+                                        <div class="data-rtechnische">{{ produkt['technische_daten']['motor2'] }}</div>
+                                    </div>
+                                {% endif %}
+
+                                {% if produkt['technische_daten']['getriebe'] %}
+                                    <div class="data">
+                                        <div class="data-l">Getriebe</div>
+                                        <div class="data-rtechnische">{{ produkt['technische_daten']['getriebe'] }}</div>
+                                    </div>
+                                {% endif %}
+
+                                {% if produkt['technische_daten']['getriebe2'] %}
+                                    <div class="data">
+                                        <div class="data-l">Getriebe 2</div>
+                                        <div class="data-rtechnische">{{ produkt['technische_daten']['getriebe2'] }}</div>
+                                    </div>
+                                {% endif %}
+
+                                {% if produkt['technische_daten']['leistung'] %}
+                                    <div class="data">
+                                        <div class="data-l">Leistung</div>
+                                        <div class="data-rtechnische">{{ produkt['technische_daten']['leistung'] }}</div>
+                                    </div>
+                                {% endif %}
+
+                                {% if produkt['technische_daten']['drehmoment'] %}
+                                    <div class="data">
+                                        <div class="data-l">Drehmoment</div>
+                                        <div class="data-rtechnische">{{ produkt['technische_daten']['drehmoment'] }}</div>
+                                    </div>
+                                {% endif %}
+
+                                {% if produkt['technische_daten']['motorsteuerung'] %}
+                                    <div class="data">
+                                        <div class="data-l">Motorsteuerung</div>
+                                        <div class="data-rtechnische">{{ produkt['technische_daten']['motorsteuerung'] }}</div>
+                                    </div>
+                                {% endif %}
+
+                                {% if produkt['technische_daten']['zylinder'] %}
+                                    <div class="data">
+                                        <div class="data-l">Zylinder</div>
+                                        <div class="data-rtechnische">{{ produkt['technische_daten']['zylinder'] }}</div>
+                                    </div>
+                                {% endif %}
+
+                                {% if produkt['technische_daten']['höchstgeschwindigkeit'] %}
+                                    <div class="data">
+                                        <div class="data-l">Höchstgeschw.</div>
+                                        <div class="data-rtechnische">{{ produkt['technische_daten']['höchstgeschwindigkeit'] }}</div>
+                                    </div>
+                                {% endif %}
+
+                                {% if produkt['technische_daten']['kraftstoffart'] %}
+                                    <div class="data">
+                                        <div class="data-l">Kraftstoffart</div>
+                                        <div class="data-rtechnische">{{ produkt['technische_daten']['kraftstoffart'] }}</div>
+                                    </div>
+                                {% endif %}
+
+                                {% if produkt['technische_daten']['sitze'] %}
+                                    <div class="data">
+                                        <div class="data-l">Sitze</div>
+                                        <div class="data-rtechnische">{{ produkt['technische_daten']['sitze'] }}</div>
+                                    </div>
+                                {% endif %}
+
+                                {% if produkt['technische_daten']['antrieb'] %}
+                                    <div class="data">
+                                        <div class="data-l">Antrieb</div>
+                                        <div class="data-rtechnische">{{ produkt['technische_daten']['antrieb'] }}</div>
+                                    </div>
+                                {% endif %}
+
+                                {% if produkt['technische_daten']['räder'] %}
+                                    <div class="data">
+                                        <div class="data-l">Räder</div>
+                                        <div class="data-rtechnische">{{ produkt['technische_daten']['räder'] }}</div>
+                                    </div>
+                                {% endif %}
+
+                                {% if produkt['technische_daten']['anhängelast'] %}
+                                    <div class="data">
+                                        <div class="data-l">Anhängelast</div>
+                                        <div class="data-rtechnische">{{ produkt['technische_daten']['anhängelast'] }}</div>
+                                    </div>
+                                {% endif %}
+
+                                {% if produkt['technische_daten']['achslast_v'] %}
+                                    <div class="data">
+                                        <div class="data-l">Achslast Vorne</div>
+                                        <div class="data-rtechnische">{{ produkt['technische_daten']['achslast_v'] }}</div>
+                                    </div>
+                                {% endif %}
+
+                                {% if produkt['technische_daten']['achslast_h'] %}
+                                    <div class="data">
+                                        <div class="data-l">Achslast Hinten</div>
+                                        <div class="data-rtechnische">{{ produkt['technische_daten']['achslast_h'] }}</div>
+                                    </div>
+                                {% endif %}
+
+                                {% if produkt['technische_daten']['fahrwerk_v'] %}
+                                    <div class="data">
+                                        <div class="data-l">Fahrwerk Vorne</div>
+                                        <div class="data-rtechnische">{{ produkt['technische_daten']['fahrwerk_v'] }}</div>
+                                    </div>
+                                {% endif %}
+
+                                {% if produkt['technische_daten']['fahrwerk_h'] %}
+                                    <div class="data">
+                                        <div class="data-l">Fahrwerk Hinten</div>
+                                        <div class="data-rtechnische">{{ produkt['technische_daten']['fahrwerk_h'] }}</div>
+                                    </div>
+                                {% endif %}
+
+                                {% if produkt['technische_daten']['leergewicht'] %}
+                                    <div class="data">
+                                        <div class="data-l">leergewicht</div>
+                                        <div class="data-rtechnische">{{ produkt['technische_daten']['leergewicht'] }}</div>
+                                    </div>
+                                {% endif %}
+
+                                {% if produkt['technische_daten']['gesamtgewicht'] %}
+                                    <div class="data">
+                                        <div class="data-l">Gesamtgewicht</div>
+                                        <div class="data-rtechnische">{{ produkt['technische_daten']['gesamtgewicht'] }}</div>
+                                    </div>
+                                {% endif %}
+
+                                {% if produkt['technische_daten']['leergewicht_kipper'] %}
+                                    <div class="data">
+                                        <div class="data-l">Leergewicht Kipper</div>
+                                        <div class="data-rtechnische">{{ produkt['technische_daten']['leergewicht_kipper'] }}</div>
+                                    </div>
+                                {% endif %}
+                                
+                                {% if produkt['technische_daten']['leergewicht_pritsche'] %}
+                                    <div class="data">
+                                        <div class="data-l">Leergewicht Pritsche</div>
+                                        <div class="data-rtechnische">{{ produkt['technische_daten']['leergewicht_pritsche'] }}</div>
+                                    </div>
+                                {% endif %}
+
+                                {% if produkt['technische_daten']['zuladung_kipper'] %}
+                                    <div class="data">
+                                        <div class="data-l">Zuladung Kipper</div>
+                                        <div class="data-rtechnische">{{ produkt['technische_daten']['zuladung_kipper'] }}</div>
+                                    </div>
+                                {% endif %}
+
+                                {% if produkt['technische_daten']['zuladung_pritsche'] %}
+                                    <div class="data">
+                                        <div class="data-l">Zuladung Pritsche</div>
+                                        <div class="data-rtechnische">{{ produkt['technische_daten']['zuladung_pritsche'] }}</div>
+                                    </div>
+                                {% endif %}
+
+                                {% if produkt['technische_daten']['laderaum_2_4_sitzer'] %}
+                                    <div class="data">
+                                        <div class="data-l">Laderaum 2/4 Sitzer</div>
+                                        <div class="data-rtechnische">{{ produkt['technische_daten']['laderaum_2_4_sitzer'] }}</div>
+                                    </div>
+                                {% endif %}
+
+                                {% if produkt['technische_daten']['ladefläche'] %}
+                                    <div class="data">
+                                        <div class="data-l">Ladefläche</div>
+                                        <div class="data-rtechnische">{{ produkt['technische_daten']['ladefläche'] }}</div>
+                                    </div>
+                                {% endif %}
+
+                                {% if produkt['technische_daten']['abgasnorm'] %}
+                                    <div class="data">
+                                        <div class="data-l">Abgasnorm</div>
+                                        <div class="data-rtechnische">{{ produkt['technische_daten']['abgasnorm'] }}</div>
+                                    </div>
+                                {% endif %}
+
+                                {% if produkt['technische_daten']['tankinhalt'] %}
+                                    <div class="data">
+                                        <div class="data-l">Tankinhalt</div>
+                                        <div class="data-rtechnische">{{ produkt['technische_daten']['tankinhalt'] }}</div>
+                                    </div>
+                                {% endif %}
+
+                                {% if produkt['technische_daten']['reichweite'] %}
+                                    <div class="data">
+                                        <div class="data-l">Reichweite</div>
+                                        <div class="data-rtechnische">{{ produkt['technische_daten']['reichweite'] }}</div>
+                                    </div>
+                                {% endif %}
+
+                                {% if produkt['technische_daten']['batterieleisung'] %}
+                                    <div class="data">
+                                        <div class="data-l">Batterieleisung</div>
+                                        <div class="data-rtechnische">{{ produkt['technische_daten']['batterieleisung'] }}</div>
+                                    </div>
+                                {% endif %}
+
+                                {% if produkt['technische_daten']['schnell_langsamladen'] %}
+                                    <div class="data">
+                                        <div class="data-l">Schnell/Langsam Laden</div>
+                                        <div class="data-rtechnische">{{ produkt['technische_daten']['schnell_langsamladen'] }}</div>
+                                    </div>
+                                {% endif %}
+
+                                {% if produkt['technische_daten']['verbrauch'] %}
+                                    <div class="data">
+                                        <div class="data-l">Verbrauch</div>
+                                        <div class="data-rtechnische">{{ produkt['technische_daten']['verbrauch'] }}</div>
+                                    </div>
+                                {% endif %}
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Empty Div -->
+                    <div></div>
+                </div>
+                <div class="popup-main-data-cont size">
+                    <div class="popup-size-data data-box">
+                        <div onclick="toggleSizeDatenCont()" class="data-headl-cont">
+                            <h5 class="redish-color"><span class="not-v">MAẞE UND</span> ABMESSUNGEN</h5>
+                            <div class="open-t-daten-btn flex-center">
+                                <i class="icon-box-arrow fas fa-chevron-right size"></i>
+                                <i class="icon-box-cross fas fa-times invisible size"></i>
+                            </div>
+
+                        </div>
+                        <div class="daten-icon size">
+                            <img src="https://res.cloudinary.com/dxcrd5sos/image/upload/v1642452491/thumbnail_1_tm7hys.png"
+                                alt="size icon">
+                        </div>
+                        <div class="technische-daten size collapsed">
+                            <img class="hidden size"
+                                src="https://res.cloudinary.com/dxcrd5sos/image/upload/v1642452491/thumbnail_1_tm7hys.png"
+                                alt="size icon">
+                            <div class="slide-in-data size">
+
+                                {% if produkt['technische_daten']['maße_lbh'] %}
+                                    <div class="data">
+                                        <div class="data-l">Maße L/B/H</div>
+                                        <div class="data-rtechnische">{{ produkt['technische_daten']['maße_lbh'] }}</div>
+                                    </div>
+                                {% endif %}
+
+                                {% if produkt['technische_daten']['radstand'] %}
+                                    <div class="data">
+                                        <div class="data-l">Radstand</div>
+                                        <div class="data-rtechnische">{{ produkt['technische_daten']['radstand'] }}</div>
+                                    </div>
+                                {% endif %}
+
+                                {% if produkt['technische_daten']['spur'] %}
+                                    <div class="data">
+                                        <div class="data-l">Spur</div>
+                                        <div class="data-rtechnische">{{ produkt['technische_daten']['spur'] }}</div>
+                                    </div>
+                                {% endif %}
+
+                                {% if produkt['technische_daten']['spur_v_h'] %}
+                                    <div class="data">
+                                        <div class="data-l">Spur Vorne/Hinten</div>
+                                        <div class="data-rtechnische">{{ produkt['technische_daten']['spur_v_h'] }}</div>
+                                    </div>
+                                {% endif %}
+
+                                {% if produkt['technische_daten']['bodenfreiheit'] %}
+                                    <div class="data">
+                                        <div class="data-l">Bodenfreiheit</div>
+                                        <div class="data-rtechnische">{{ produkt['technische_daten']['bodenfreiheit'] }}</div>
+                                    </div>
+                                {% endif %}
+
+                                {% if produkt['technische_daten']['rahmenhöhe'] %}
+                                    <div class="data">
+                                        <div class="data-l">Rahmenhöhe</div>
+                                        <div class="data-rtechnische">{{ produkt['technische_daten']['rahmenhöhe'] }}</div>
+                                    </div>
+                                {% endif %}
+
+                                {% if produkt['technische_daten']['kofferraum_länge'] %}
+                                    <div class="data">
+                                        <div class="data-l">Kofferraum Länge</div>
+                                        <div class="data-rtechnische">{{ produkt['technische_daten']['kofferraum_länge'] }}</div>
+                                    </div>
+                                {% endif %}
+
+                                {% if produkt['technische_daten']['kofferraum_volumen'] %}
+                                    <div class="data">
+                                        <div class="data-l">Kofferraum Volumen</div>
+                                        <div class="data-rtechnische">{{ produkt['technische_daten']['kofferraum_volumen'] }}</div>
+                                    </div>
+                                {% endif %}
+
+                                {% if produkt['technische_daten']['wendekreis_radius'] %}
+                                <div class="data">
+                                    <div class="data-l">Wendekreis Radius</div>
+                                    <div class="data-rtechnische">{{ produkt['technische_daten']['wendekreis_radius'] }}</div>
+                                </div>
+                                {% endif %}
+
+                                {% if produkt['technische_daten']['innerer_wendekreis'] %}
+                                    <div class="data">
+                                        <div class="data-l">Innerer Wendekreis</div>
+                                        <div class="data-rtechnische">{{ produkt['technische_daten']['innerer_wendekreis'] }}</div>
+                                    </div>
+                                {% endif %}
+
+                                {% if produkt['technische_daten']['mase_pritsche'] %}
+                                    <div class="data">
+                                        <div class="data-l">Maße Pritsche</div>
+                                        <div class="data-rtechnische">{{ produkt['technische_daten']['mase_pritsche'] }}</div>
+                                    </div>
+                                {% endif %}
+
+                                {% if produkt['technische_daten']['ladevolumen 2/4 Sitzer'] %}
+                                    <div class="data">
+                                        <div class="data-l">Ladevolumen_2_4_sitzer</div>
+                                        <div class="data-rtechnische">{{ produkt['technische_daten']['ladevolumen_2_4_sitzer'] }}</div>
+                                    </div>
+                                {% endif %}
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Empty Div -->
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/produkt.js') }}"></script>
+
+{% endblock %}
