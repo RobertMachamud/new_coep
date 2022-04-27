@@ -9,9 +9,10 @@
   
 
 <p align="center">
-  <a href="https://new-coep.herokuapp.com/">
+   :computer: <a href="https://new-coep.herokuapp.com/">
    View the live project here
   </a>
+   :computer:
   <br>
 </p>
 
@@ -251,7 +252,7 @@ Click <a href="https://help.github.com/en/github/creating-cloning-and-archiving-
 
 ## Content
   - All content was written by the developer - except:
-    - Swiper Js part <a href="https://github.com/thatanjan/carousel-slider-swiper.js-yt">Github Link Here</a>
+    - Swiper Js part from thatanjan - <a href="https://github.com/thatanjan/carousel-slider-swiper.js-yt">Github Link Here</a>
     - Some parts (member section - about us section) are similar to the parent site (<a href="https://www.coepmobiles.de/">https://www.coepmobiles.de/</a>).
 
 ## Media
