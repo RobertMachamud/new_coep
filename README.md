@@ -9,7 +9,7 @@
   
 
 <p align="center">
-  <a href="http://recipe-share-milestone.herokuapp.com/">
+  <a href="https://new-coep.herokuapp.com/">
    View the live project here
   </a>
   <br>
