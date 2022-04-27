@@ -2,7 +2,7 @@
 import os
 import random
 from flask import (
-    Flask, flash, render_template,
+    Flask, render_template,
     redirect, request, session, url_for)
 from bson.objectid import ObjectId
 from flask_pymongo import PyMongo

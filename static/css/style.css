@@ -396,7 +396,7 @@ header .header-content nav ul
 
 /* ---------------------------------------------------- HOME CONTAINER */
 
-.top-space
+#top-space
 {
     height: 80px;
     width: 100%;
@@ -418,7 +418,7 @@ header .header-content nav ul
     left: 0;
     width: 100vw;
     height: 125vh;
-    background: url("https://res.cloudinary.com/dxcrd5sos/image/upload/v1648757478/homebg_lfvc2x.jpg");
+    background: url("https://res.cloudinary.com/dxcrd5sos/image/upload/v1650938156/homebgsquoosh_bdqosx.jpg");
     background-size: cover; 
     -webkit-box-shadow: 0 10px 20px -6px rgba(0,0,0,.4);
     -moz-box-shadow: 0 10px 20px -6px rgba(0,0,0,.4);
@@ -921,9 +921,6 @@ header .header-content nav ul
     color: var(--redish-color);
     background: #fff;
 }
-/* !!!!!!!!!!!!!!!!! */
-
-
 
 
 /* ---------------------------------------------------- PRODUKTE CONTAINER */
@@ -989,9 +986,6 @@ header .header-content nav ul
 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-/*            !!!! des. mobile too (gaps)*/
-    grid-column-gap: 12%;
-    grid-row-gap: 10em;
     grid-row-gap: 5em;
 }
 
@@ -1945,7 +1939,7 @@ hr
 @media only screen and (max-width: 650px)
 {
     header,
-    .main-cont .top-space
+    .main-cont #top-space
     {
         height: 60px;
     }
@@ -2389,7 +2383,7 @@ hr
         height: 50px;
     }
     
-    .top-space
+    #top-space
     {
         height: 50px !important;
     }
