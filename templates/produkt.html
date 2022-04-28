@@ -33,10 +33,10 @@
                                     <!-- Pagination Dots -->
                                     <div class="swiper-pagination"></div>
                                     <!-- Prev/Next Buttons -->
-                                    <div class="swiper-button-prev">
+                                    <div class="swiper-button-prev popup">
                                         <i class="fa fa-angle-left redish-color"></i>
                                     </div>
-                                    <div class="swiper-button-next">
+                                    <div class="swiper-button-next popup">
                                         <i class="fa fa-angle-right redish-color"></i>
                                     </div>
                                 </div>                            
@@ -72,10 +72,10 @@
                                 <!-- Pagination Dots -->
                                 <div class="swiper-pagination"></div>
                                 <!-- Prev/Next Buttons -->
-                                <div class="swiper-button-prev">
+                                <div class="swiper-button-prev car-data">
                                     <i class="fa fa-angle-left redish-color"></i>
                                 </div>
-                                <div class="swiper-button-next">
+                                <div class="swiper-button-next car-data">
                                     <i class="fa fa-angle-right redish-color"></i>
                                 </div>
                             </div>
@@ -347,8 +347,15 @@
                                         <div class="data-l">Fahrwerk Hinten</div>
                                         <div class="data-rtechnische">{{ produkt['technische_daten']['fahrwerk_h'] }}</div>
                                     </div>
-                                {% endif %}
+                                {% endif %} 405 km (NEFZ) - 301 km (WLTP)
 
+                                {% if produkt['technische_daten']['fahrmodi'] %}
+                                    <div class="data">
+                                        <div class="data-l">Fahrmodi</div>
+                                        <div class="data-rtechnische">{{ produkt['technische_daten']['fahrmodi'] }}</div>
+                                    </div>
+                                {% endif %}
+                                Wallbox 32A EU
                                 {% if produkt['technische_daten']['leergewicht'] %}
                                     <div class="data">
                                         <div class="data-l">leergewicht</div>
@@ -437,6 +444,34 @@
                                     <div class="data">
                                         <div class="data-l">Schnell/Langsam Laden</div>
                                         <div class="data-rtechnische">{{ produkt['technische_daten']['schnell_langsamladen'] }}</div>
+                                    </div>
+                                {% endif %}
+
+                                {% if produkt['technische_daten']['schnell_laden'] %}
+                                    <div class="data">
+                                        <div class="data-l">Schnell Laden ber CCS</div>
+                                        <div class="data-rtechnische">{{ produkt['technische_daten']['schnell_laden'] }}</div>
+                                    </div>
+                                {% endif %}
+
+                                {% if produkt['technische_daten']['langsam_laden'] %}
+                                    <div class="data">
+                                        <div class="data-l">Wallbox 32A EU</div>
+                                        <div class="data-rtechnische">{{ produkt['technische_daten']['langsam_laden'] }}</div>
+                                    </div>
+                                {% endif %}
+
+                                {% if produkt['technische_daten']['langsam_laden2'] %}
+                                    <div class="data">
+                                        <div class="data-l">Wallbox 230V 16A pro Phase</div>
+                                        <div class="data-rtechnische">{{ produkt['technische_daten']['langsam_laden2'] }}</div>
+                                    </div>
+                                {% endif %}
+
+                                {% if produkt['technische_daten']['langsam_laden3'] %}
+                                    <div class="data">
+                                        <div class="data-l">Langsam laden über CCS</div>
+                                        <div class="data-rtechnische">{{ produkt['technische_daten']['langsam_laden3'] }}</div>
                                     </div>
                                 {% endif %}
 

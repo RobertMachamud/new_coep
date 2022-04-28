@@ -484,7 +484,7 @@ header .header-content nav ul
     left: 0;
     width: 100vw;
     height: 125vh;
-    background: url("https://res.cloudinary.com/dxcrd5sos/image/upload/v1650938156/homebgsquoosh_bdqosx.jpg");
+    background: url("https://res.cloudinary.com/dxcrd5sos/image/upload/v1651093709/homebgps_ypolxm.jpg");
     background-size: cover; 
     -webkit-box-shadow: 0 10px 20px -6px rgba(0,0,0,.4);
     box-shadow: 0 10px 20px -6px rgba(0,0,0,.4);
@@ -1089,7 +1089,7 @@ header .header-content nav ul
     display: grid;
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-    grid-row-gap: 5em;
+    grid-gap: 5em;
 }
 
 /* Produkte Cards */
@@ -1659,9 +1659,6 @@ footer
     height: 0 !important;
     width: 0 !important;
     overflow: hidden;
-    -webkit-transition: 4s;
-    -o-transition: 4s;
-    transition: 4s;
 }
 
 .technische-daten .data
@@ -1709,6 +1706,11 @@ footer
         -ms-transform: translateX(0);
             transform: translateX(0);
     opacity: 1;
+}
+
+.slide-in-data.beschr.slide-in
+{
+    transition: 0s !important;
 }
 
 hr
@@ -1830,6 +1832,11 @@ hr
     width: 100%;
 }
 
+.swiper-slide
+{
+    cursor: pointer;
+}
+
  .swiper-pagination-bullet-active 
 { 
     background-color: var(--redish-color); 
@@ -1841,6 +1848,17 @@ hr
      color: var(--redish-color);
      font-size: 2rem;
 } 
+
+/* Prev/Next buttons - popup img cont */
+.swiper-button-prev.popup
+{
+    left: 0px;
+}
+
+.swiper-button-next.popup
+{
+    right: 0px;
+}
 
  .swiper-button-prev:after, 
  .swiper-button-next:after 
@@ -2508,6 +2526,16 @@ hr
     .card-img-top
     {
         height: 18em;
+    }
+
+    .swiper-button-prev.car-data
+    {
+        left: 0px;
+    }
+    
+    .swiper-button-next.car-data
+    {
+        right: 0px;
     }
 }
 
