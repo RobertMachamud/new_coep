@@ -206,7 +206,7 @@ The Freeformatter, W3C CSS Validator Services, and Autoprefixer and were used to
 
 
 ## Known Bugs
-  - Description text on the product site behaves weirdly by resizing the site (transition).
+  - Swiper js arrows not visible - only no firefox.
 
 # Deployment
 
