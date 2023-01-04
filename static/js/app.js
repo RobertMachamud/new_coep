@@ -16,6 +16,11 @@ const showMoreBtn = document.querySelector(".show-more-bttn");
 const memberAboutUs = document.querySelector(".about-us-box.opened");
 const textAboutUs = document.querySelector(".about-us-box.closed");
 
+// Team List Button
+const teamListBtn = document.querySelector(".team-list-btn");
+// Team List Cont
+const teamListCont = document.querySelector(".members-cont.toggle-cont");
+
 // Slide-Menu open/closed
 let slideMenuOpen = false;
 
@@ -62,6 +67,21 @@ const toggleAboutCont = () => {
     textAboutUs.classList.toggle("d-none");
 }
 
+
+// Toggles Team List
+const toggleTeamList = () => {
+    let btnText = teamListBtn.firstElementChild.innerText;
+
+    if (btnText.toLowerCase() == "alle anzeigen") {        
+        teamListBtn.firstElementChild.innerText = "weniger anzeigen";
+        teamListCont.classList.remove("closed");
+    } else if (btnText.toLowerCase() == "weniger anzeigen") {
+        teamListBtn.firstElementChild.innerText = "alle anzeigen";
+        teamListCont.classList.add("closed");
+    }
+}
+// adding function to Team List Button
+teamListBtn.addEventListener("click", toggleTeamList);
 
 // Scroll to top Button
 function scrollToTop() {

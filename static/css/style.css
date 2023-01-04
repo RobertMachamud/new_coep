@@ -497,6 +497,8 @@ header .header-content nav ul
     word-spacing: .1em;
     margin-bottom: 1.5rem;
     font-weight: 600;
+
+    visibility: hidden !important;
 }
 
 .sub-headl
@@ -660,6 +662,12 @@ header .header-content nav ul
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 1em;
     margin-bottom: 24px;
+    transition: .2s ease;
+}
+
+.members-cont.toggle-cont.closed
+{
+    display: none;
 }
 
 /* Member Card - Info about members */
@@ -801,7 +809,7 @@ header .header-content nav ul
 }
 
 /* Link to Projekte (Coep) BUTTON */
-.projekte-btn
+.team-list-btn
 {
     position: relative;
     background: var(--redish-color);
@@ -814,12 +822,14 @@ header .header-content nav ul
     cursor: pointer;
     line-height: normal;
     letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: .2s;
     border: none;
 }
 
-.projekte-btn:hover
+.team-list-btn:hover
 {
-    color: var(--redish-color);
+    color: var(--redish-color) !important;
     background: #fff;
 }
 
@@ -990,7 +1000,7 @@ header .header-content nav ul
 }
 
 /* Link to Projekte (Coep) BUTTON */
-.projekte-btn
+.team-list-btn
 {
     position: relative;
     background: var(--redish-color);
@@ -1006,7 +1016,7 @@ header .header-content nav ul
     border: none;
 }
 
-.projekte-btn:hover
+.team-list-btn:hover
 {
     color: var(--redish-color);
     background: #fff;
