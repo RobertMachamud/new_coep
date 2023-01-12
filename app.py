@@ -13,8 +13,7 @@ if os.path.exists("env.py"):
 app = Flask(__name__)
 
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
-# app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
-app.config["MONGO_URI"] = "mongodb+srv://robertTheUser:r00tUser@myfirstcluster.3kydg.mongodb.net/coep_cars?"
+app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
@@ -35,5 +34,5 @@ def produkt(produkt_id):
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
-            port=8080,
+            port=os.environ.get("PORT"),
             debug=False)
