@@ -1953,6 +1953,11 @@ hr
 
 @media only screen and (max-width: 1200px)
 {
+    #home-bg
+    {
+        top: -5%;
+    }
+
     .popup-name
     {
         margin-bottom: 1em;
