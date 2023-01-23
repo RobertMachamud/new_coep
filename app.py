@@ -34,5 +34,5 @@ def produkt(produkt_id):
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
-            port=os.environ.get("PORT"),
+            port=8080,
             debug=False)
